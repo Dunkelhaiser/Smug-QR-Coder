@@ -24,7 +24,10 @@ const success = (result: string) => {
         navigator.clipboard.writeText(results.textContent!);
     });
 };
-const error = () => {};
+const error = () => {
+    scanner.clear();
+    scannerSection.innerHTML = `<p class="result-error-text">No code was detected.</p>`;
+};
 scanner.render(success, error);
 
 document.querySelector("#reader > div img")?.remove();

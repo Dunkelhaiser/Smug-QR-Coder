@@ -5,6 +5,7 @@
 }
 
 .result-text {
+    overflow-wrap: break-word;
     cursor: pointer;
     font-size: 1.6rem;
 
@@ -16,6 +17,10 @@
     &:active {
         color: $light-text-dark;
     }
+}
+
+.result-error-text {
+    font-size: 1.6rem;
 }
 
 #dark {
