@@ -10,7 +10,14 @@ html {
     overflow: overlay;
     font-family: $sans-serif;
     font-size: 62.5%;
-    background-color: #e7e7e7;
+    background-color: $light-background;
+}
+
+body {
+    @include flex(column, center, center, center, 0, wrap);
+
+    width: 100vw;
+    height: 100vh;
 }
 
 input,

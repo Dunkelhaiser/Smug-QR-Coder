@@ -1,0 +1,32 @@
+.big-btn {
+    @include flex(column, center, center, center, 0, nowrap);
+
+    @include hover;
+
+    aspect-ratio: 1/1;
+    padding: 4rem;
+
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: $light-foreground;
+
+    background-color: $light-blue;
+    border: none;
+    border-radius: 2em;
+    box-shadow: rgba(149 157 165 / 20%) 0 8px 24px;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        background-color: $light-blue-light;
+    }
+
+    &:active {
+        cursor: pointer;
+        background-color: $light-blue-dark;
+    }
+}
+
+.big-btn-container {
+    @include grid(2, 2rem);
+}
