@@ -16,7 +16,7 @@ const scanner = new Html5QrcodeScanner(
 );
 
 const success = (result: string) => {
-    scanner.clear();
+    // scanner.clear();
     scannerSection.innerHTML = `<p class="result-text">${result}</p>`;
     const results = document.querySelector(".result-text") as HTMLParagraphElement;
 
@@ -24,10 +24,14 @@ const success = (result: string) => {
         navigator.clipboard.writeText(results.textContent!);
     });
 };
-const error = () => {
-    scanner.clear();
-    scannerSection.innerHTML = `<p class="result-error-text">No code was detected.</p>`;
+const error = (err: Error) => {
+    if (err.message === "No MultiFormat Readers were able to detect the code.") {
+        scanner.clear();
+        scannerSection.innerHTML = `<p class="result-error-text">No code was detected.</p>`;
+    }
 };
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 scanner.render(success, error);
 
 document.querySelector("#reader > div img")?.remove();
