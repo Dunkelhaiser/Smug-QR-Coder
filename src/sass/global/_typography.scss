@@ -3,3 +3,30 @@
     font-size: 3.2rem;
     text-align: center;
 }
+
+.result-text {
+    cursor: pointer;
+    font-size: 1.6rem;
+
+    &:hover,
+    &:focus {
+        color: $light-text-light;
+    }
+
+    &:active {
+        color: $light-text-dark;
+    }
+}
+
+#dark {
+    .result-text {
+        &:hover,
+        &:focus {
+            color: $dark-text-light;
+        }
+
+        &:active {
+            color: $dark-text-dark;
+        }
+    }
+}
