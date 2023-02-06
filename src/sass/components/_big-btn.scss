@@ -27,7 +27,6 @@
 
 .big-btn-container {
     @include grid(2, 2rem);
-
     @include respond-phone {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
