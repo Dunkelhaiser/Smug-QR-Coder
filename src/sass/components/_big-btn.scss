@@ -1,6 +1,4 @@
 .big-btn {
-    @include flex(column, center, center, center, 0, nowrap);
-
     @include hover;
 
     aspect-ratio: 1/1;
@@ -13,7 +11,7 @@
     background-color: $light-blue;
     border: none;
     border-radius: 2em;
-    box-shadow: rgba(149 157 165 / 20%) 0 8px 24px;
+    box-shadow: $light-shadow 0 8px 24px;
 
     &:hover,
     &:focus {
@@ -29,4 +27,40 @@
 
 .big-btn-container {
     @include grid(2, 2rem);
+
+    @include respond-phone {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+.theme-btn {
+    @extend .big-btn;
+
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 10rem;
+    height: 10rem;
+}
+
+#dark {
+    .big-btn {
+        color: $dark-text;
+        background-color: $dark-blue;
+        box-shadow: $dark-shadow 0 8px 24px;
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            background-color: $dark-blue-light;
+        }
+
+        &:active {
+            cursor: pointer;
+            background-color: $dark-blue-dark;
+        }
+    }
 }

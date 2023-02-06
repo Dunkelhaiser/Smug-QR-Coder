@@ -2,5 +2,12 @@
     padding: 4rem;
     background-color: $light-foreground;
     border-radius: 2em;
-    box-shadow: rgba(149 157 165 / 20%) 0 8px 24px;
+    box-shadow: $light-shadow 0 8px 24px;
+}
+
+#dark {
+    .container {
+        background-color: $dark-foreground;
+        box-shadow: $dark-shadow 0 8px 24px;
+    }
 }
