@@ -11,3 +11,7 @@
         box-shadow: $dark-shadow 0 8px 24px;
     }
 }
+
+.container-layout {
+    @include flex(column, center, center, center, 2rem, nowrap);
+}

@@ -1,0 +1,45 @@
+button {
+    @include hover;
+
+    cursor: pointer;
+
+    width: 100%;
+    padding: 1.4em 1.07em;
+
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: $light-foreground;
+
+    background-color: $light-blue;
+    border-color: $light-blue-dark;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0.35em;
+    outline-color: $light-blue-dark;
+
+    &:hover {
+        background-color: $light-blue-light;
+    }
+
+    &:active {
+        background-color: $light-blue-dark;
+    }
+}
+
+#dark {
+    button {
+        color: $dark-text;
+        background-color: $dark-blue;
+        border-color: $dark-blue-dark;
+        outline: $dark-blue-dark;
+
+        &:hover,
+        &:focus {
+            background-color: $dark-blue-light;
+        }
+
+        &:active {
+            background-color: $dark-blue-dark;
+        }
+    }
+}

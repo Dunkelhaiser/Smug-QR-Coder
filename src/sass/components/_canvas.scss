@@ -1,0 +1,10 @@
+canvas {
+    border-radius: 2rem;
+    box-shadow: $light-shadow 0 8px 24px;
+}
+
+#dark {
+    canvas {
+        box-shadow: $dark-shadow 0 8px 24px;
+    }
+}
